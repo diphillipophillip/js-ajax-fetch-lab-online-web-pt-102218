@@ -31,7 +31,7 @@ function createIssue() {
   const url = `${baseURL}/repos/${repo}/issues`;
   
   const postData = {
-    title: document.getElementsById('title').value
+    title: document.getElementById('title').value
     body: document.getElementById('body').value
   }
 }
