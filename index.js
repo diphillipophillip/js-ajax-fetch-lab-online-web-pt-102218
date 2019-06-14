@@ -2,9 +2,6 @@ const baseURL = 'https://api.github.com';
 const user = '<YOUR_USERNAME>';
 
 
-const baseURL = 'https://api.github.com';
-
-
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
