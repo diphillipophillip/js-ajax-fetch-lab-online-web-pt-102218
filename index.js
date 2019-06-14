@@ -14,7 +14,7 @@ function forkRepo() {
   fetch(`${baseURL}/repos/${repo}/forks`, {
     method: 'POST',
     headers: {
-      Authorization: `token ${token}`
+      Authorization: `token ${getToken}`
     }
   })
   .then(res => res.json())
