@@ -41,6 +41,8 @@ function createIssue() {
     headers: { Authorization: `token ${getToken}`
     }
   })
+  .then(res => res.json())
+  .then(json)
 }
 
 function getIssues() {
