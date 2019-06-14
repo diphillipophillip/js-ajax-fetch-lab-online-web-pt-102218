@@ -1,5 +1,5 @@
 const baseURL = 'https://api.github.com';
-const user = '<YOUR_USERNAME>';
+const user = 'diphillipophillip';
 const token = f36b2272eb92bd86bb649ea4229bf1fdfbb703b9
 
 function getToken() {
@@ -48,5 +48,14 @@ function createIssue() {
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
   const repo = `${user}/js-ajax-fetch-lab`
-  const url = 
+  const url = `${baseURL}/repos/${repo}/issues`
+  
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+  .then(res => res.json())
+  .then(json => console.log(json))
 }
