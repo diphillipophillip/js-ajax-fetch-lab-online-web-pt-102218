@@ -2,7 +2,7 @@ const baseURL = 'https://api.github.com';
 const user = '<YOUR_USERNAME>';
 
 
-
+const baseURL = 'https://api.github.com';
 
 
 function getToken() {
