@@ -1,6 +1,6 @@
 const baseURL = 'https://api.github.com';
 const user = '<YOUR_USERNAME>';
-
+const token = 
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -11,7 +11,11 @@ function getToken() {
 function forkRepo() {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   
-  fetch(`${baseURL}/repos/${repo}/forks`)
+  fetch(`${baseURL}/repos/${repo}/forks`, {
+    headers: {
+      Authorization: `token ${token}`
+    }
+  }
   .then(resp => resp.json())
   .then(json => console.log(json))
   
