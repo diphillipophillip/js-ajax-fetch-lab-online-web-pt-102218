@@ -1,6 +1,6 @@
 const baseURL = 'https://api.github.com';
 const user = '<YOUR_USERNAME>';
-const token = 
+const token = f36b2272eb92bd86bb649ea4229bf1fdfbb703b9
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -15,8 +15,8 @@ function forkRepo() {
     headers: {
       Authorization: `token ${token}`
     }
-  }
-  .then(resp => resp.json())
+  })
+  .then(res => res.json())
   .then(json => console.log(json))
   
 }
