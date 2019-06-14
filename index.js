@@ -42,7 +42,7 @@ function createIssue() {
     }
   })
   .then(res => res.json())
-  .then(json => getIssues)
+  .then(json => getIssues())
 }
 
 function getIssues() {
