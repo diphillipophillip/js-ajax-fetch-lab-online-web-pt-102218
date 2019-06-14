@@ -31,9 +31,16 @@ function createIssue() {
   const url = `${baseURL}/repos/${repo}/issues`;
   
   const postData = {
-    title: document.getElementById('title').value
+    title: document.getElementById('title').value,
     body: document.getElementById('body').value
   }
+  
+  fetch(url, {
+    method: 'POST', 
+    body: JSON.stringify(postData), 
+    headers: { Authorization: `token ${token}`
+    }
+  })
 }
 
 function getIssues() {
